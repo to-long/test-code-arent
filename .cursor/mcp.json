@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "figma-developer-mcp": {
+      "command": "./.cursor/scripts/mcp-figma-wrapper.sh",
+      "args": [],
+      "options": {
+        "cwd": "."
+      }
+    },
+    "github": {
+      "command": "./.cursor/scripts/mcp-github-wrapper.sh",
+      "args": []
+    }
+  }
+}
