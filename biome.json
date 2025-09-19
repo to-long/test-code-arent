@@ -7,8 +7,37 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "includes": ["src/**/*", "*.js", "*.jsx", "*.ts", "*.tsx", "*.json"]
+    "includes": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "*.js",
+      "*.jsx",
+      "*.ts",
+      "*.tsx",
+      "*.json"
+    ]
   },
+  "overrides": [
+    {
+      "includes": ["*.js", "*.jsx", "*.ts", "*.tsx"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noNonNullAssertion": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["*.css"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noUnknownAtRules": "off"
+          }
+        }
+      }
+    }
+  ],
   "formatter": {
     "enabled": true,
     "formatWithErrors": false,
