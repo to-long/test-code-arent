@@ -1,29 +1,12 @@
-import React, { StrictMode } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./routes/AppRouter";
 import "./index.css";
-import About from "./pages/About";
-import NotFound from "./pages/NotFound";
-import Home from "./pages/Home";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    errorElement: <NotFound />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/about",
-        element: <About />,
-      },
-    ],
-  },
-]);
+import React from "react";
 
 const rootElement = document.getElementById("root");
+
 if (!rootElement) {
   throw new Error("Root element not found");
 }
