@@ -36,9 +36,19 @@ function App() {
           </a>
         </div>
 
-        <h1 className="text-6xl font-bold text-gray-800 dark:text-white mb-8">
+        <h1 className="text-6xl font-bold text-gray-800 dark:text-white mb-4">
           Vite + React + Tailwind
         </h1>
+
+        <div className="mb-8 space-y-4">
+          <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-300">
+            Noto Sans JP (Primary Font - All Text)
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-400">
+            こんにちは！これは日本語のテキストです。Noto Sans JP
+            フォントを使用しています。This is English text using the same font.
+          </p>
+        </div>
 
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
           <button
@@ -57,9 +67,18 @@ function App() {
           </p>
         </div>
 
-        <p className="text-gray-500 dark:text-gray-400">
-          Click on the Vite and React logos to learn more
-        </p>
+        <div className="space-y-4">
+          <h3 className="text-xl font-semibold text-gray-700 dark:text-gray-300">
+            Inter (Secondary Font - Headings Only)
+          </h3>
+          <p className="text-gray-500 dark:text-gray-400">
+            This paragraph uses Noto Sans JP (primary font) for body text. All
+            headings (h1-h6) automatically use Inter font.
+          </p>
+          <p className="text-gray-500 dark:text-gray-400">
+            Click on the Vite and React logos to learn more
+          </p>
+        </div>
       </div>
     </div>
   );
