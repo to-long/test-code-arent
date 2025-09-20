@@ -19,7 +19,7 @@ export default function Home(): React.JSX.Element {
       <div className="max-w-[1280px] mx-auto">
         <ComboMenu />
         <Records />
-        <CallToActionButton className="mb-16 mx-auto">
+        <CallToActionButton className="mt-6 mb-16 mx-auto">
           記録をもっと見る
         </CallToActionButton>
       </div>
