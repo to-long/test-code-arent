@@ -1,6 +1,7 @@
 import type React from "react";
 import AchievementRate from "@/features/home/components/AchievementRate";
 import { ComboMenu } from "@/features/home/components/ComboMenu";
+import { Records } from "@/features/home/components/Records";
 import WeightFatPercentageGraph from "@/features/home/components/WeightFatPercentageGraph";
 
 export default function Home(): React.JSX.Element {
@@ -14,8 +15,9 @@ export default function Home(): React.JSX.Element {
           <WeightFatPercentageGraph />
         </div>
       </div>
-      <div className="flex max-w-[1280px] mx-auto">
+      <div className="max-w-[1280px] mx-auto">
         <ComboMenu />
+        <Records />
       </div>
     </div>
   );
