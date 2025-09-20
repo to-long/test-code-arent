@@ -69,12 +69,12 @@ export const Column = () => {
             style={{ backgroundImage: `url(${item.image})` }}
           >
             <div className="absolute bottom-0 left-0 bg-(--color-primary-300) pl-2 py-2 pr-5 inline-block">
-              <h4 className="text-white text-base">
+              <h5 className="text-white text-base">
                 {dayjs(item.date).format("YYYY.MM.DD  HH:mm")}
-              </h4>
+              </h5>
             </div>
           </div>
-          <h4 className="text-(--color-dark-500) mt-2">{item.title}</h4>
+          <h5 className="text-(--color-dark-500) mt-2">{item.title}</h5>
           <div className="flex flex-wrap gap-2 mt-2 mb-4">
             {item.tags.map((tag) => (
               <Link key={tag} to={`/column?tag=${tag}`}>

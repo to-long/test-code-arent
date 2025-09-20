@@ -5,7 +5,7 @@ import { ComboMenu } from "@/features/home/components/ComboMenu";
 import { Records } from "@/features/home/components/Records";
 import WeightFatPercentageGraph from "@/features/home/components/WeightFatPercentageGraph";
 
-export default function Home(): React.JSX.Element {
+export default function HomePage(): React.JSX.Element {
   return (
     <div className="min-h-screen">
       <div className="grid grid-cols-12 gap-0">
