@@ -16,7 +16,7 @@ export default function Home(): React.JSX.Element {
           <WeightFatPercentageGraph />
         </div>
       </div>
-      <div className="max-w-[1280px] mx-auto">
+      <div className="max-w-[1280px] mx-auto px-4">
         <ComboMenu />
         <Records />
         <CallToActionButton className="mt-6 mb-16 mx-auto">
