@@ -14,7 +14,9 @@
     "check:fix": "biome check --write .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "fix": "biome check --write .",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "react": "^19.1.1",
