@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface DataPoint {
   month: string;
@@ -60,16 +60,16 @@ const WeightFatPercentageGraph = () => {
   }, []);
 
   // Calculate responsive dimensions
-  const chartWidth = Math.max(400, containerSize.width);
-  const chartHeight = Math.max(200, Math.min(400, chartWidth * 0.4));
-  const padding = Math.max(20, chartWidth * 0.03);
+  const chartWidth = Math.max(300, containerSize.width);
+  const chartHeight = Math.max(300, Math.min(300, chartWidth * 0.4));
+  const padding = Math.max(30, chartWidth * 0.03);
 
   // Calculate scales - only if data exists
   if (data.length === 0) {
     return (
       <div
         ref={containerRef}
-        className="flex-1 w-full bg-[rgba(46,46,46,1)] flex items-center justify-center min-h-[200px]"
+        className="flex-1 w-full h-[312px] bg-[rgba(46,46,46,1)] flex items-center justify-center"
       >
         <div className="text-gray-400">Loading chart...</div>
       </div>
@@ -115,14 +115,14 @@ const WeightFatPercentageGraph = () => {
   return (
     <div
       ref={containerRef}
-      className="flex-1 w-full bg-[rgba(46,46,46,1)] opacity-0 animate-fade-in p-4"
+      className="flex-1 w-full h-[312px] bg-[rgba(46,46,46,1)] opacity-0 animate-fade-in px-4"
       style={{ animationFillMode: "forwards" }}
     >
-      <div className="relative w-full h-full">
+      <div className="relative w-full">
         <svg
           width={chartWidth}
           height={chartHeight}
-          className="w-full h-full"
+          className="w-full"
           style={{ maxWidth: "100%", maxHeight: "100%" }}
         >
           {/* Vertical grid lines */}
@@ -261,7 +261,7 @@ const WeightFatPercentageGraph = () => {
           >
             {(() => {
               const [type, indexStr] = hoveredPoint.split("-");
-              const index = parseInt(indexStr);
+              const index = parseInt(indexStr, 10);
               const point = data[index];
 
               return (

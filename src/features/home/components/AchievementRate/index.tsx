@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 
 const AchievementRate = () => {
   return (
-    <div className="w-full relative h-full bg-[url('/images/achievement-rate-bg.png')] bg-cover bg-no-repeat">
-      <div className="w-full h-0 pt-[57.41%]"></div>
-      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+    <div className="w-full h-[312px] relative bg-[url('/images/achievement-rate-bg.png')] bg-cover bg-no-repeat ">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
         <CircleProgress
           size={181}
           strokeWidth={4}
@@ -35,10 +34,10 @@ const CircleProgress = ({
     setTimeout(() => {
       setProgress(initialProgress);
     }, 100);
-  }, [progress]);
+  }, [initialProgress]);
 
   return (
-    <div className="relative inline-flex items-center justify-center">
+    <>
       <svg width={size} height={size} className="transform -rotate-90">
         {/* Background Circle */}
         <circle
@@ -70,7 +69,7 @@ const CircleProgress = ({
         </span>
         <span className="text-[25px]">{progress}%</span>
       </div>
-    </div>
+    </>
   );
 };
 
