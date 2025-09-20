@@ -45,6 +45,11 @@ h1 {
   line-height: 1.1;
 }
 
+h3 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
 button {
   cursor: pointer;
 }
