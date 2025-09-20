@@ -15,7 +15,7 @@ export default {
           300: "#FFCC21",
           400: "#FF963C",
           500: "#EA6C00",
-          "300-400": "linear-gradient(180deg, #FFCC21 0%, #FF963C 100%)",
+          "300-400": "linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%)",          
         },
         secondary: {
           300: "#8FE9D0",

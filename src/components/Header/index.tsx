@@ -5,9 +5,9 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "自分の記録", icon: "memo.svg" },
-    { name: "チャレンジ", icon: "challenge.svg" },
-    { name: "お知らせ", icon: "info.svg" },
+    { name: "my-record", icon: "memo.svg" },
+    { name: "challenge", icon: "challenge.svg" },
+    { name: "notification", icon: "info.svg" },
   ];
 
   return (
