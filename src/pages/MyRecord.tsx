@@ -1,7 +1,7 @@
 import type React from "react";
 import { CallToActionButton } from "@/components/CallToActionButton";
-import { Column } from "@/features/my-record/components/Column";
-import { Recommend } from "@/features/my-record/components/Recommend";
+import { Column } from "@/features/column/components/Column";
+import { Recommend } from "@/features/column/components/Recommend";
 
 export default function MyRecord(): React.JSX.Element {
   return (
