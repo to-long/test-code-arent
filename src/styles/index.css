@@ -5,9 +5,9 @@
   --color-primary-400: #FF963C;
   --color-primary-500: #EA6C00;
   --color-secondary-300: #8FE9D0;
+  --color-gray-400: #777777;
   --color-dark-500: #414141;
   --color-dark-600: #2E2E2E;
-  --color-gray-400: #777777;
   --color-light: #FFFFFF;
   --gradient-primary-300-400: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
   --font-inter: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -49,33 +49,34 @@ body {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+h1,.h1 {
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: 0.13px;
 }
 
-h2 {
+h2,.h2 {
   font-size: 22px;
   line-height: 27px;
   letter-spacing: 0.11px;
 }
 
-h3 {
+h3,.h3 {
   font-size: 20px;
   line-height: 24px;
 }
 
-h4 {
+h4,.h4 {
   font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.09px;
 }
 
-h5 {
+h5,.h5 {
   font-size: 15px;
   line-height: 18px;
 }
