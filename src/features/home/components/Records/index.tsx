@@ -60,7 +60,7 @@ export const Records = () => {
             style={{ backgroundImage: `url(${record.image})` }}
           >
             <div className="pt-[100%]"></div>
-            <div className="absolute bottom-0 left-0 bg-primary-300 border-1 p-2 inline-block">
+            <div className="absolute bottom-0 left-0 bg-(--color-primary-300) pl-2 py-2 pr-5 inline-block">
               <h4 className="text-white text-base">
                 {`${dayjs(record.date).format("MM.DD")}.${record.type} `}
               </h4>

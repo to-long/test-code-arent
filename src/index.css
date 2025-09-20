@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-300: #FFCC21;
+  --color-primary-400: #FF963C;
+  --color-primary-500: #EA6C00;
+  --color-secondary-300: #8FE9D0;
+  --color-dark-500: #414141;
+  --color-dark-600: #2E2E2E;
+  --color-gray-400: #777777;
+  --color-light: #FFFFFF;
+  --gradient-primary-300-400: linear-gradient(32.95deg, #FFCC21 8.75%, #FF963C 86.64%);
+  --font-inter: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
 :root {
   font-family: "Noto Sans JP", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
