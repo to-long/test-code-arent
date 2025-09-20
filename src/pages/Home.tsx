@@ -1,4 +1,5 @@
 import type React from "react";
+import { CallToActionButton } from "@/components/CallToActionButton";
 import AchievementRate from "@/features/home/components/AchievementRate";
 import { ComboMenu } from "@/features/home/components/ComboMenu";
 import { Records } from "@/features/home/components/Records";
@@ -18,6 +19,9 @@ export default function Home(): React.JSX.Element {
       <div className="max-w-[1280px] mx-auto">
         <ComboMenu />
         <Records />
+        <CallToActionButton className="mb-16 mx-auto">
+          記録をもっと見る
+        </CallToActionButton>
       </div>
     </div>
   );

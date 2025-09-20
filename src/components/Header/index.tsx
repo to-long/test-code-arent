@@ -43,7 +43,7 @@ const Header = () => {
                     <img src={`/icons/${link.icon}`} alt={link.name} />
                     {link.notification && (
                       <div className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-red-500 rounded-full w-4 h-4 flex items-center justify-center">
-                        <span className="text-white text-xs font-size-[10px]">
+                        <span className="text-white text-xs text-[10px]">
                           {link.notification}
                         </span>
                       </div>

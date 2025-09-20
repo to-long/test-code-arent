@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multi-Series Line Chart with Chart.js</title>
+    <!-- Include Chart.js from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .chart-container {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <canvas id="myMultiLineChart"></canvas>
+    </div>
+
+    <script>
+        const ctx = document.getElementById('myMultiLineChart').getContext('2d');
+
+        const labels = ['6月', '7月', '8月', '9月', '10月', '11月', '12月', '1月', '2月', '3月', '4月', '5月'];
+
+        const data = {
+            labels: labels,
+            datasets: [
+                {
+                    label: 'Series A',
+                    data: [90, 80, 85, 75, 70, 60, 65, 55, 50, 45, 40, 35], // Example data for the first line
+                    borderColor: 'rgb(75, 192, 192)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                    tension: 0.3, // Makes the line slightly curved
+                    fill: false, // Don't fill the area under the line
+                    pointRadius: 5,
+                    pointBackgroundColor: 'rgb(75, 192, 192)'
+                },
+                {
+                    label: 'Series B',
+                    data: [88, 78, 87, 72, 68, 62, 70, 58, 52, 48, 42, 38], // Example data for the second line
+                    borderColor: 'rgb(255, 205, 86)',
+                    backgroundColor: 'rgba(255, 205, 86, 0.2)',
+                    tension: 0.3, // Makes the line slightly curved
+                    fill: false, // Don't fill the area under the line
+                    pointRadius: 5,
+                    pointBackgroundColor: 'rgb(255, 205, 86)'
+                }
+            ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    title: {
+                        display: true,
+                        text: 'Monthly Data Trend'
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Month'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Value'
+                        },
+                        beginAtZero: true
+                    }
+                }
+            }
+        };
+
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>

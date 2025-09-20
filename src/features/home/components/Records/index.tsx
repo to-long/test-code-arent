@@ -52,7 +52,7 @@ export const Records = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-4 gap-2 mb-6">
+    <div className="grid grid-cols-4 gap-2 mb-7">
       {records.map((record) => (
         <div key={record.id} className="col-span-1">
           <div
