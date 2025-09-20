@@ -24,17 +24,20 @@ export const ComboMenu = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-4 gap-[64px] mx-auto py-8">
-      {comboItems.map((item) => (
-        <div className="col-span-1" key={item.id}>
-          <div className="w-[136px] h-[136px] bg-[url('/icons/hexagon.svg')] bg-center bg-no-repeat flex items-center justify-center">
+    <div className="flex align-center">
+      <div className="flex gap-[64px] mx-auto py-8 inline-flex">
+        {comboItems.map((item) => (
+          <div
+            key={item.id}
+            className="w-[136px] h-[136px] bg-[url('/icons/hexagon.svg')] bg-center bg-no-repeat flex items-center justify-center"
+          >
             <div className="text-center cursor-pointer">
               <img src={item.icon} alt={item.name} className="inline" />
               <h3>{item.name}</h3>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
