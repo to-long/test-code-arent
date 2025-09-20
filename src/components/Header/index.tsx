@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const navLinks = [
+  const desktopLinks = [
     { name: "自分の記録", icon: "memo.svg", link: "/my-record" },
     { name: "チャレンジ", icon: "challenge.svg", link: "/challenge" },
     {
@@ -13,6 +13,15 @@ const Header = () => {
       link: "/notification",
       notification: 1,
     },
+  ];
+
+  const mobileLinks = [
+    { name: "自分の記録", link: "/my-record" },
+    { name: "体重グラフ", link: "/weight-graph" },
+    { name: "目標", link: "/goal" },
+    { name: "選択中のコース", link: "/course" },
+    { name: "コラム一覧", link: "/column" },
+    { name: "設定", link: "/setting" },
   ];
 
   return (
@@ -30,11 +39,8 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="ml-auto mr-4 hidden md:flex items-center space-x-6">
-            {navLinks.map((link, index) => (
-              <Link
-                key={index}
-                to={`/${link.name === "ホーム" ? "" : link.name.toLowerCase()}`}
-              >
+            {desktopLinks.map((link, index) => (
+              <Link key={index} to={link.link}>
                 <a
                   href={link.link}
                   className="inline-flex min-w-[160px] hover:opacity-70 items-center gap-2 p-2"
@@ -55,43 +61,39 @@ const Header = () => {
             ))}
           </nav>
 
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="p-2 text-gray-500 hover:opacity-70"
-            type="button"
-          >
-            <img
-              src={isMenuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
-              alt="Menu"
-              className="h-8 w-8"
-            />
-          </button>
-        </div>
-
-        {/* Mobile menu */}
-        {isMenuOpen && (
-          <div className="md:hidden py-2 border-t border-gray-200">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-              {navLinks.map((link, index) => (
-                <Link
-                  key={index}
-                  to={`/${
-                    link.name === "ホーム" ? "" : link.name.toLowerCase()
-                  }`}
-                  className="flex items-center px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 rounded-md"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <img
-                    src={`/icons/${link.icon}`}
-                    alt={link.name}
-                    className="h-5 w-5 mr-3"
-                  />
-                  {link.name}
-                </Link>
-              ))}
-            </div>
+          <div className="p2 relative">
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className=" text-gray-500 hover:opacity-70"
+              type="button"
+            >
+              <img
+                src={isMenuOpen ? "/icons/close.svg" : "/icons/menu.svg"}
+                alt="Menu"
+                className="h-8 w-8"
+              />
+            </button>
+            {/* Mobile menu */}
+            {isMenuOpen && (
+              <div className="absolute top-[50px] right-0 min-w-[280px] bg-(--color-gray-400)">
+                {mobileLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    to={link.link}
+                    className="flex items-center font-medium text-white py-8 px-6"
+                    style={{
+                      borderBottom: "1px solid #2E2E2E",
+                      borderTop: "1px solid #8b8b8b",
+                    }}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <span className="text-white text-base">{link.name}</span>
+                  </Link>
+                ))}
+              </div>
+            )}
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from 'react-router-dom';
+import type React from "react";
+import { Link } from "react-router-dom";
 
 export default function NotFound(): React.JSX.Element {
   return (
@@ -9,8 +9,8 @@ export default function NotFound(): React.JSX.Element {
       <p className="text-lg mb-8 max-w-md">
         The page you're looking for doesn't exist or has been moved.
       </p>
-      <Link 
-        to="/" 
+      <Link
+        to="/"
         className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200"
       >
         Go to Home
